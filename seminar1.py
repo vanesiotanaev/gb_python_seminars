@@ -48,17 +48,30 @@
 
 #Альтернативное решение
 
-def ListCreate(size):
-    numbers = []
-    for i in range(0, size):
-        numbers.append(float(input(f'Введите {i+1}e число: ')))
-    print(f'Список из {len(numbers)} чисел выглядит так: {numbers}')
-    max = numbers[0]
+# def ListCreate(size):
+#     numbers = []
+#     for i in range(0, size):
+#         numbers.append(float(input(f'Введите {i+1}e число: ')))
+#     print(f'Список из {len(numbers)} чисел выглядит так: {numbers}')
+#     max = numbers[0]
     
-    for i in numbers:
-        if i >= max:
-            max = i
-    return max
+#     for i in numbers:
+#         if i >= max:
+#             max = i
+#     return max
 
-max_value = ListCreate(5)
-print(f"{max_value} -- максимальное число из данного списка")
+# max_value = ListCreate(5)
+# print(f"{max_value} -- максимальное число из данного списка")
+
+# 1. Напишите программу, которая будет на вход принимать число N и выводить числа от -N до N
+
+def ShowValuesNToN (n):
+    values = []
+    for i in range(-n, n+1):
+        values.append(i)
+    
+    return values
+
+numbers = ShowValuesNToN(int(input("Введите число N: ")))
+print(f"Список от {numbers[0]} до {numbers[len(numbers) - 1]} выглядит так: {numbers}")
+
