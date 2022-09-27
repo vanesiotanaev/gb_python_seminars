@@ -65,13 +65,24 @@
 
 # 1. Напишите программу, которая будет на вход принимать число N и выводить числа от -N до N
 
-def ShowValuesNToN (n):
-    values = []
-    for i in range(-n, n+1):
-        values.append(i)
+# def ShowValuesNToN (n):
+#     values = []
+#     for i in range(-n, n+1):
+#         values.append(i)
     
-    return values
+#     return values
 
-numbers = ShowValuesNToN(int(input("Введите число N: ")))
-print(f"Список от {numbers[0]} до {numbers[len(numbers) - 1]} выглядит так: {numbers}")
+# numbers = ShowValuesNToN(int(input("Введите число N: ")))
+# print(f"Список от {numbers[0]} до {numbers[len(numbers) - 1]} выглядит так: {numbers}")
 
+# 2. Напишите программу, которая будет принимать на вход дробь и показывать первую цифру дробной части числа.
+
+def ShowFractionNumber (value):
+    if value % 1 == 0:
+        print(f"Число {int(value)} не является дробным")
+    else:
+        value = int((value*10)%10)
+        print (f"Цифра {value} -- первая по счету в дробной части введенного числа.")
+    return value
+
+a = ShowFractionNumber(float(input("Введите число: ")))
