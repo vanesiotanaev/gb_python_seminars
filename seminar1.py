@@ -77,12 +77,25 @@
 
 # 2. Напишите программу, которая будет принимать на вход дробь и показывать первую цифру дробной части числа.
 
-def ShowFractionNumber (value):
-    if value % 1 == 0:
-        print(f"Число {int(value)} не является дробным")
-    else:
-        value = int((value*10)%10)
-        print (f"Цифра {value} -- первая по счету в дробной части введенного числа.")
-    return value
+# def ShowFractionNumber (value):
+#     if value % 1 == 0:
+#         print(f"Число {int(value)} не является дробным")
+#     else:
+#         value = int((value*10)%10)
+#         print (f"Цифра {value} -- первая по счету в дробной части введенного числа.")
+#     return value
 
-a = ShowFractionNumber(float(input("Введите число: ")))
+# a = ShowFractionNumber(float(input("Введите число: ")))
+
+# 3. Напишите программу, которая принимает на вход число и проверяет, кратно ли оно 5 и 10 или 15, но не 30.
+
+def Divisibility (value):
+    if (value % 15 == 0 or (value % 10 == 0 and value % 5 == 0)) and not value % 30 == 0 :
+        print (f"Число {value} кратно 5 и 10 или 15, но не 30!")
+
+        return True
+    else:
+        print (f"Число {value} кратно 30!")
+        return False
+
+cond = Divisibility(int(input("Введите число: ")))
